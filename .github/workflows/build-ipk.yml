@@ -55,7 +55,7 @@ jobs:
 
       - name: Publishing to GitHub Releases
         uses: svenstaro/upload-release-action@v2
-        if: github.event_name == 'release'
+        if: success()
         with:
           repo_token: ${{ github.token }}
           file: .github/*.ipk
